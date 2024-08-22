@@ -1,8 +1,10 @@
-function App() {
+import { Container } from "./style";
+
+const App = ( ) =>  {
   return (
-    <div className="App">
+    <Container>
       Ola
-    </div>
+    </Container>
   );
 }
 
