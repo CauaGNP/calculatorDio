@@ -1,8 +1,10 @@
+import { InputContainer } from "./style";
+
 const Input = ( ) =>  {
     return (
-      <div className="App">
-        Ola
-      </div>
+      <InputContainer>
+        <input />
+      </InputContainer>
     );
   }
 

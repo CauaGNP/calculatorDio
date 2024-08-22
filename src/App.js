@@ -1,9 +1,14 @@
-import { Container } from "./style";
+import Input from "./components/Input"
+import Button from "./components/Button"
+
+import { Container, Content } from "./style";
 
 const App = ( ) =>  {
   return (
     <Container>
-      Ola
+      <Content>
+        <Input />
+      </Content>
     </Container>
   );
 }
