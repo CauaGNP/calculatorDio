@@ -28,12 +28,62 @@ const App = ( ) =>  {
       setCurrentNumber('0');
       setOparation('+');
     }else{
-      console.log(Number(firstNumber), Number(currentNumber))
       const sum = Number(firstNumber) + Number(currentNumber)
       setCurrentNumber(String(sum))
       setOparation('');
     }
   }
+
+  // Subtração
+  const handleMinusNumber = () => {
+    if (firstNumber == '0'){
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0');
+      setOparation('-');
+    }else{
+      const sum = Number(firstNumber) - Number(currentNumber);
+      setCurrentNumber(String(sum));
+      setOparation('');
+    }
+  }
+  // Multiplicação
+  const handleMultiNumber = () => {
+    if (firstNumber == '0'){
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0');
+      setOparation('x');
+    }else{
+      const sum = Number(firstNumber) * Number(currentNumber);
+      setCurrentNumber(String(sum))
+      setOparation('')
+    }
+  }
+
+  // Divisão
+  const handleDivNumber = () => {
+      if (firstNumber == '0'){
+        setFirstNumber(String(currentNumber));
+        setCurrentNumber('0')
+        setOparation('/')
+      }else{
+        const sum = Number(firstNumber) / Number(currentNumber)
+        setCurrentNumber(String(sum))
+        setOparation('')
+      }
+  }
+
+  // Potenciação
+  const handlePotNumber = () => {
+    if (firstNumber == '0'){
+      setFirstNumber(String(currentNumber));
+      setOparation('%');
+    }else{
+      const sum = Number(firstNumber) / 100
+      setCurrentNumber(sum);
+      setOparation('0')
+    }
+  }
+
   //Igual  
   const handleEquails = () => {
     if (firstNumber != '0' && operation != '' && currentNumber != '0'){
@@ -41,7 +91,18 @@ const App = ( ) =>  {
         case ('+'):
           handleSumNumber()
           break;
-
+        case ('-'):
+          handleMinusNumber()
+          break;
+        case ('x'):
+          handleMultiNumber()
+          break;
+        case ('/'):
+          handleDivNumber()
+          break;
+        case('%'):
+          handlePotNumber()
+          break;
         default:
           break;
       }
@@ -53,16 +114,16 @@ const App = ( ) =>  {
       <Content>
         <Input value={currentNumber} />
         <Row>
-          <Button label="x" onClick={() =>handleAddNumber('x')}/>
-          <Button label="/" onClick={() =>handleAddNumber('/')}/>
+          <Button label="%" onClick={handlePotNumber}/>
+          <Button label="/" onClick={handleDivNumber}/>
           <Button label="C" onClick={handleClear}/>
-          <Button label="X" onClick={() =>handleAddNumber('X')}/>
+          <Button label="x" onClick={handleMultiNumber}/>
         </Row>
         <Row>
           <Button label="7" onClick={() =>handleAddNumber('7')}/>
           <Button label="8" onClick={() =>handleAddNumber('8')}/>
           <Button label="9" onClick={() =>handleAddNumber('9')}/>
-          <Button label="-" onClick={() =>handleAddNumber('')}/>
+          <Button label="-" onClick={handleMinusNumber}/>
         </Row>
         <Row>
           <Button label="4" onClick={() =>handleAddNumber('4')}/>
