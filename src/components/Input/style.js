@@ -12,7 +12,7 @@ export const InputContainer = styled.div`
     input{
         width: 100%;
         height: 75px;
-        background-color: #AAAAFF;
+        background-color: #658147;
         border: 0;
         display: flex;
         align-items: flex-end;

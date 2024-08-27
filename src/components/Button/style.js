@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.button`
     padding: 20px;
     border: 1px solid #CDCDCD;
-    background-color: #00AAF0;
+    background-color: #686D76;
     color: #FFFFFF;
     font-size: 24px;
     font-weight: 700;
@@ -11,5 +11,6 @@ export const ButtonContainer = styled.button`
 
     &:hover {
         opacity: 0.6;
+        transition: all 0.3s ease-out;
     }
 `
