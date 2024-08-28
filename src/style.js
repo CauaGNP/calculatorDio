@@ -13,6 +13,9 @@ export const Container = styled.div`
 export const Content = styled.div`
     background-color: #FFFFFF;
     width: 50%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #000000;
 `
 
 export const Row = styled.div`

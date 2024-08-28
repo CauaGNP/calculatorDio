@@ -111,6 +111,7 @@ const App = ( ) =>  {
 
   return (
     <Container>
+  
       <Content>
         <Input value={currentNumber} />
         <Row>
